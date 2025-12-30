@@ -2,7 +2,6 @@
 
 ## Anggota Kelompok
 - Arya Zaky Putra (607022400006)
-- 
 
 ## Deskripsi
 Website untuk memenuhi tugas besar mata kuliah Pemrograman Web.
