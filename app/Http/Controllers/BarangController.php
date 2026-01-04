@@ -21,8 +21,8 @@ class BarangController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama'   => 'required',
-            'harga'  => 'required|numeric',
+            'nama' => 'required',
+            'harga' => 'required|numeric',
             'jumlah' => 'required|numeric'
         ]);
 
@@ -47,8 +47,8 @@ class BarangController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'nama'   => 'required',
-            'harga'  => 'required|numeric',
+            'nama' => 'required',
+            'harga' => 'required|numeric',
             'jumlah' => 'required|numeric'
         ]);
 

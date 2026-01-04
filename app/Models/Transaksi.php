@@ -11,7 +11,12 @@ class Transaksi extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'nomor','nama','total','bayar','kembali','tanggal_waktu'
+        'nomor',
+        'nama',
+        'total',
+        'bayar',
+        'kembali',
+        'tanggal_waktu'
     ];
 
     public function detail()

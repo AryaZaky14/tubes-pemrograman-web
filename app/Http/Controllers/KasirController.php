@@ -55,10 +55,10 @@ class KasirController extends Controller
             $cart[$barang->id_barang]['qty'] = $totalQty;
         } else {
             $cart[$barang->id_barang] = [
-                'id'    => $barang->id_barang,
-                'nama'  => $barang->nama,
+                'id' => $barang->id_barang,
+                'nama' => $barang->nama,
                 'harga' => $barang->harga,
-                'qty'   => $request->qty
+                'qty' => $request->qty
             ];
         }
 
@@ -132,11 +132,11 @@ class KasirController extends Controller
             DB::transaction(function () use ($request, $cart, &$trx) {
 
                 $trx = Transaksi::create([
-                    'nomor'         => 'TRX-' . date('YmdHis'),
-                    'nama'          => Auth::user()->nama,
-                    'total'         => $request->total,
-                    'bayar'         => $request->bayar,
-                    'kembali'       => $request->bayar - $request->total,
+                    'nomor' => 'TRX-' . date('YmdHis'),
+                    'nama' => Auth::user()->nama,
+                    'total' => $request->total,
+                    'bayar' => $request->bayar,
+                    'kembali' => $request->bayar - $request->total,
                     'tanggal_waktu' => now()
                 ]);
 
@@ -152,10 +152,10 @@ class KasirController extends Controller
 
                     TransaksiDetail::create([
                         'id_transaksi' => $trx->id_transaksi,
-                        'id_barang'    => $item['id'],
-                        'harga'        => $item['harga'],
-                        'qty'          => $item['qty'],
-                        'total'        => $item['harga'] * $item['qty']
+                        'id_barang' => $item['id'],
+                        'harga' => $item['harga'],
+                        'qty' => $item['qty'],
+                        'total' => $item['harga'] * $item['qty']
                     ]);
 
                     $barang->decrement('jumlah', $item['qty']);
@@ -182,11 +182,11 @@ class KasirController extends Controller
         $trx = Transaksi::findOrFail($id);
 
         $detail = TransaksiDetail::join(
-                'barang',
-                'transaksi_detail.id_barang',
-                '=',
-                'barang.id_barang'
-            )
+            'barang',
+            'transaksi_detail.id_barang',
+            '=',
+            'barang.id_barang'
+        )
             ->where('transaksi_detail.id_transaksi', $id)
             ->select(
                 'barang.nama',

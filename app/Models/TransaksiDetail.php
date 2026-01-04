@@ -11,7 +11,11 @@ class TransaksiDetail extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'id_transaksi','id_barang','harga','qty','total'
+        'id_transaksi',
+        'id_barang',
+        'harga',
+        'qty',
+        'total'
     ];
 }
 

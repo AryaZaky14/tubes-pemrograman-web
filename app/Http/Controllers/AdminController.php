@@ -12,7 +12,7 @@ class AdminController extends Controller
     {
         // Total data
         $barang = Barang::count();
-        $user   = User::count();
+        $user = User::count();
 
         // Barang stok menipis
         $stok_tipis = Barang::where('jumlah', '<', 5)->get();
@@ -33,8 +33,8 @@ class AdminController extends Controller
             'transaksi'
         ));
         if ($request->jumlah < 0) {
-    return back()->with('error', 'Stok tidak boleh minus');
-}
+            return back()->with('error', 'Stok tidak boleh minus');
+        }
 
     }
 }

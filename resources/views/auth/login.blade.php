@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 
-    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -27,7 +27,7 @@
             background: #ffffff;
             border: none;
             padding: 32px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
         }
 
         /* ===== TITLE ===== */
@@ -51,7 +51,7 @@
 
         .form-control-lg:focus {
             border-color: #495057;
-            box-shadow: 0 0 0 0.15rem rgba(73,80,87,0.25);
+            box-shadow: 0 0 0 0.15rem rgba(73, 80, 87, 0.25);
         }
 
         /* ===== BUTTON ===== */
@@ -75,6 +75,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="login-card shadow-lg">
@@ -107,4 +108,5 @@
     </div>
 
 </body>
+
 </html>
